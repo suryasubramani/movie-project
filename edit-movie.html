@@ -11,16 +11,37 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="js/validator.js"></script>
+    <script src="js/edit-movie.js"></script>
   </head>
   <body>
     <form onsubmit="editMovieForm()">
+      <input type="text" name="movieId" id="movieId" placeholder="movieId" />
       <input type="text" name="title" id="title" placeholder="title" />
       <input type="text" name="language" id="language" placeholder="language" />
       <input type="text" name="imageUrl" id="imageUrl" placeholder="imageUrl" />
-      <input type="text" name="movieId" id="movieId" placeholder="movieId" />
       <button>Edit Movie</button>
     </form>
     <script>
+      function getMovie(id) {
+        const url =
+          "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies/" + id;
+        axios
+          .get(url)
+          .then((res) => {
+            console.log(res.data);
+            const movieObj = res.data;
+
+            document.querySelector("#movieId").value = movieObj.id;
+            document.querySelector("#title").value = movieObj.title;
+            document.querySelector("#language").value = movieObj.language;
+            document.querySelector("#imageUrl").value = movieObj.imageUrl;
+          })
+          .catch((err) => {
+            alert("Unable to get movie details" + id);
+          });
+      }
+
       function editMovieForm() {
         event.preventDefault();
         var title = document.querySelector("#title").value;
@@ -31,8 +52,12 @@
         console.log(language);
         console.log(imageUrl);
         console.log(movieId);
-        updateMovies(movieId, title, language, imageUrl);
+        updateMovie(movieId, title, language, imageUrl);
       }
+      var params = new URLSearchParams(window.location.search.substr(1));
+      var id = params.get("id");
+
+      getMovie(id);
     </script>
   </body>
 </html>
