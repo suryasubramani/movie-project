@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Movie</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <form onsubmit="editMovieForm()">
+      <input type="text" name="title" id="title" placeholder="title" />
+      <input type="text" name="language" id="language" placeholder="language" />
+      <input type="text" name="imageUrl" id="imageUrl" placeholder="imageUrl" />
+      <input type="text" name="movieId" id="movieId" placeholder="movieId" />
+      <button>Edit Movie</button>
+    </form>
+    <script>
+      function editMovieForm() {
+        event.preventDefault();
+        var title = document.querySelector("#title").value;
+        var language = document.querySelector("#language").value;
+        var imageUrl = document.querySelector("#imageUrl").value;
+        var movieId = document.querySelector("#movieId").value;
+        console.log(title);
+        console.log(language);
+        console.log(imageUrl);
+        console.log(movieId);
+        updateMovies(movieId, title, language, imageUrl);
+      }
+    </script>
+  </body>
+</html>
