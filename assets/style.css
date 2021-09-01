@@ -127,10 +127,6 @@ body {
   border-radius: 5px;
 }
 
-::placeholder {
-  text-align: center;
-}
-
 .delete-movie-container form button {
   font-size: 1rem;
   margin: 0.5rem;
@@ -141,5 +137,50 @@ body {
 
 .delete-movie-container form button:hover {
   background-color: #ff0000;
+  color: #fdf8f5;
+}
+
+/* editeditcontainer style*/
+
+.editmovie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.editmovie-container form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border: 3px solid #266150;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+}
+
+.editmovie-container form h1 b {
+  color: #ffb200;
+}
+
+.editmovie-container form input {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.editmovie-container form button {
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  color: #266150;
+}
+
+.editmovie-container form button:hover {
+  background-color: #266150;
   color: #fdf8f5;
 }
