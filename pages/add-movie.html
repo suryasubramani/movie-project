@@ -12,11 +12,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="addmovie-container">
@@ -45,13 +40,9 @@
     <script>
       function addMovieForm() {
         event.preventDefault();
-        // alert("alert");
         var title = document.querySelector("#title").value;
         var language = document.querySelector("#language").value;
         var imageUrl = document.querySelector("#image-url").value;
-        // var title = $("#title").val();
-        // var language = $("#language").val();
-        // var imageUrl = $("#image-url").val();
         console.log(title);
         console.log(language);
         console.log(imageUrl);

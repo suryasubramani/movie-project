@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CIS-Delete-Movies</title>
+    <link rel="stylesheet" href="/assets/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
@@ -15,11 +16,18 @@
     <script src="/assets/js/delete-movie.js"></script>
   </head>
   <body>
-    <form onsubmit="deleteMovieForm()">
-      <input type="text" name="movie-id" id="movie-id" placeholder="movie-id" />
-      <button>Delete Movie</button>
-    </form>
-
+    <div class="delete-movie-container">
+      <form onsubmit="deleteMovieForm()">
+        <h1>fun<b>CIS</b></h1>
+        <input
+          type="text"
+          name="movie-id"
+          id="movie-id"
+          placeholder="movie-id"
+        />
+        <button>Delete Movie</button>
+      </form>
+    </div>
     <script>
       function deleteMovieForm() {
         event.preventDefault();

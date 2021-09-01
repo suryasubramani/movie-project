@@ -94,3 +94,52 @@ body {
   background-color: #266150;
   color: #fdf8f5;
 }
+
+/* delete-movie container style*/
+
+.delete-movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.delete-movie-container form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border: 3px solid #266150;
+  border-radius: 5px;
+  height: 250px;
+  width: 300px;
+}
+
+.delete-movie-container form h1 b {
+  color: #ffb200;
+}
+
+.delete-movie-container form input {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.delete-movie-container form button {
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  color: #266150;
+}
+
+.delete-movie-container form button:hover {
+  background-color: #ff0000;
+  color: #fdf8f5;
+}
