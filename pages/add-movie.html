@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CIS-Add-Movies</title>
+    <title>funCIS-addMovie</title>
+    <link rel="stylesheet" href="/assets/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
@@ -18,30 +19,39 @@
     ></script>
   </head>
   <body>
-    <form onsubmit="addMovieForm()">
-      <input
-        type="text"
-        name="title"
-        id="title"
-        placeholder="title"
-        value="s"
-      />
-      <input type="text" name="language" id="language" placeholder="language" />
-      <input type="text" name="image-url" id="image-url" placeholder="image" />
-      <button>Add Movie</button>
-    </form>
-    <script src="assets/js/validator.js"></script>
-    <script src="assets/js/add-movie.js"></script>
+    <div class="addmovie-container">
+      <div class="inputform">
+        <form onsubmit="addMovieForm()">
+          <h1>fun<b>CIS</b></h1>
+          <input type="text" name="title" id="title" placeholder="title" />
+          <input
+            type="text"
+            name="language"
+            id="language"
+            placeholder="language"
+          />
+          <input
+            type="text"
+            name="image-url"
+            id="image-url"
+            placeholder="image"
+          />
+          <button>Add Movie</button>
+        </form>
+      </div>
+    </div>
+    <script src="/assets/js/validator.js"></script>
+    <script src="/assets/js/add-movie.js"></script>
     <script>
       function addMovieForm() {
         event.preventDefault();
         // alert("alert");
-        // var title = document.querySelector("#title").value;
-        // var language = document.querySelector("#language").value;
-        // var imageUrl = document.querySelector("#image-url").value;
-        var title = $("#title").val();
-        var language = $("#language").val();
-        var imageUrl = $("#image-url").val();
+        var title = document.querySelector("#title").value;
+        var language = document.querySelector("#language").value;
+        var imageUrl = document.querySelector("#image-url").value;
+        // var title = $("#title").val();
+        // var language = $("#language").val();
+        // var imageUrl = $("#image-url").val();
         console.log(title);
         console.log(language);
         console.log(imageUrl);

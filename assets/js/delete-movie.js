@@ -1,10 +1,10 @@
 function deleteMovie(movieId) {
     console.log("delete movie", movieId);
-    if (movieId == null || movieId.trim()==""){
+    if (movieId == null){
       alert("Movie Id is mandatory");
     } else {
       const url =
-        "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies/" +
+        "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies/" +
         movieId;
       axios
         .delete(url)

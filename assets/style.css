@@ -45,3 +45,52 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* Add-Movie section style */
+
+.addmovie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.addmovie-container form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+  border: 3px solid #266150;
+  border-radius: 5px;
+  height: 250px;
+  width: 300px;
+}
+
+.addmovie-container form h1 b {
+  color: #ffb200;
+}
+
+.addmovie-container form input {
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.addmovie-container form button {
+  font-size: 0.75rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  color: #266150;
+}
+
+.addmovie-container form button:hover {
+  background-color: #266150;
+  color: #fdf8f5;
+}

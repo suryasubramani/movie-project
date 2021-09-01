@@ -10,7 +10,7 @@ function addMovie(title,language, imageUrl){
         //alert("Successfully Added");
         const movieObj = { title:title, language:language, imageUrl: imageUrl};
         console.log(movieObj);
-        const url = "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies";
+        const url = "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies";
         axios.post(url,movieObj).then(res=>{
             const data = res.data;
             console.log("Response:", data);

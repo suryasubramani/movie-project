@@ -1,7 +1,7 @@
 function listMovies(){
     console.log("list Movies");
 
-    const url = "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies";
+    const url = "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies";
         axios.get(url).then(res=>{
             const data = res.data;
             console.table(data);

@@ -11,7 +11,7 @@ function updateMovie(movieId,title,language,imageUrl){
         //alert("Successfully Added");
         const movieObj = { movieId:movieId, title:title, language:language, imageUrl: imageUrl};
         console.log(movieObj);
-        const url = "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies/" + movieId;
+        const url = "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies/" + movieId;
         axios.put(url,movieObj).then(res=>{
             const data = res.data;
             console.log("Response:", data);

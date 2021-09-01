@@ -4,7 +4,7 @@ function viewMovie(movieId) {
       alert("Movie Id is mandatory");
     } else {
       const url =
-        "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies/" +
+        "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies/" +
         movieId;
       axios
         .get(url)
