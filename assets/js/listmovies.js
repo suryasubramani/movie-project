@@ -19,7 +19,7 @@ function formMovieTableData(movies){
     for(let movieObj of movies){
         content += `<div class="ncard" style="background-image: url('/images/${movieObj.imageUrl}');  ">
             <div class="ncard__actions">
-                <span><a href="edit-movie.html?id=${movieObj.id}">Edit</a> </span>
+                <span><a href="edit-movie.html?id=${movieObj.id}">edit</a> </span>
                 <span><button type="button" onclick="deleteMovie(${movieObj.id})">Delete</button></span>
             </div>
             <div class="ncard__footer">

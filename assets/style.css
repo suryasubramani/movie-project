@@ -222,6 +222,32 @@ body {
   margin-left: 0.5em;
 }
 
+.ncard__actions button {
+  border: none;
+  border-radius: 3px;
+  background: none;
+  color: red;
+  transition: 00.5s;
+}
+.ncard__actions a {
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  background: none;
+  color: red;
+  font-weight: 400;
+  transition: 00.5s;
+}
+
+.ncard__actions button:hover {
+  background-color: Red;
+  color: white;
+}
+.ncard__actions a:hover {
+  background-color: Red;
+  color: white;
+}
+
 .ncard__footer {
   color: white;
   font-weight: bold;

@@ -39,13 +39,12 @@
     <script>
       function getMovie(id) {
         const url =
-          "https://product-mock-api.herokuapp.com/movieapp/api/v1/movies/" + id;
+          "https://movieapp-apii.herokuapp.com/movieapp/api/v1/movies/" + id;
         axios
           .get(url)
           .then((res) => {
             console.log(res.data);
             const movieObj = res.data;
-
             document.querySelector("#movieId").value = movieObj.id;
             document.querySelector("#title").value = movieObj.title;
             document.querySelector("#language").value = movieObj.language;
